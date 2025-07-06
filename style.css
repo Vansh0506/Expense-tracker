@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background:
+      linear-gradient(135deg, rgba(15,32,39,0.85), rgba(255, 255, 255, 0)),
+      url('money2.jpg');
+    background-size: cover;
+    color: #e0e6f1;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 50px 20px;
+  }
+  
+
+.container {
+  background: #1a1f2e;
+  padding: 40px 45px;
+  border-radius: 20px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    0 0 15px 3px rgba(255, 111, 97, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 111, 97, 0.3);
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ff6f61;
+  text-shadow: 0 0 10px #ff6f61;
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(145deg, #232830, #1b212d);
+  color: #e0e6f1;
+  font-size: 17px;
+  font-weight: 500;
+  box-shadow:
+    inset 4px 4px 8px #181e28,
+    inset -4px -4px 8px #2a3346;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+  color: #778899;
+  font-weight: 400;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  background: linear-gradient(145deg, #2e374d, #1f2640);
+  box-shadow:
+    inset 6px 6px 10px #161b28,
+    inset -6px -6px 12px #2f3a5a;
+}
+
+button {
+  background: linear-gradient(45deg, #ff6f61, #ff8c78);
+  border: none;
+  padding: 14px 0;
+  border-radius: 14px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 15px rgba(255, 111, 97, 0.6);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff8c78, #ff6f61);
+  box-shadow: 0 12px 24px rgba(255, 111, 97, 0.9);
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 10px rgba(255, 111, 97, 0.5);
+}
+
+.expense-list {
+  margin-top: 40px;
+  max-height: 280px;
+  overflow-y: auto;
+  border-top: 2px solid #ff6f61;
+  padding-top: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: #ff6f61 #1a1f2e;
+}
+
+.expense-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.expense-list::-webkit-scrollbar-track {
+  background: #1a1f2e;
+  border-radius: 10px;
+}
+
+.expense-list::-webkit-scrollbar-thumb {
+  background-color: #ff6f61;
+  border-radius: 10px;
+  border: 2px solid #1a1f2e;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 12px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  background: linear-gradient(145deg, #27303f, #1e2634);
+  box-shadow:
+    4px 4px 6px #1a212b,
+    -4px -4px 6px #344054;
+  font-weight: 600;
+  font-size: 16px;
+  color: #c8d0e7;
+  transition: background 0.3s ease;
+}
+
+.expense-item:hover {
+  background: linear-gradient(145deg, #ff6f61, #ff8c78);
+  color: white;
+  box-shadow:
+    0 0 12px #ff6f61,
+    0 0 20px #ff6f61;
+}
+
+.expense-description {
+  overflow-wrap: break-word;
+  max-width: 70%;
+}
+
+.expense-amount {
+  color: #ff6f61;
+  font-weight: 700;
+  min-width: 80px;
+  text-align: right;
+}
+
+.total {
+  margin-top: 40px;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: right;
+  color: #ff6f61;
+  text-shadow: 0 0 8px #ff6f61;
+}
